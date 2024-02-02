@@ -1,0 +1,24 @@
+.supportwrapper{
+    background-color: darkslategrey;
+    display: flex;
+    height: 100%;
+}
+.tickets{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 30vw;
+}
+.chatcontainer{
+    margin-top: 50px;
+}
+.support {
+    grid-column: 2/-1;
+  }
+
+a{
+    color:black;
+    text-decoration: none;
+}
+

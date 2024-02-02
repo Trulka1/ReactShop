@@ -1,0 +1,46 @@
+.account {
+    grid-column: 2/-1;
+    background-color: rgb(109, 121, 236);
+  }
+.account_wrapper{
+  margin-left: 30px;
+  margin-top: 30px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(12,1fr);
+}
+.account_info{
+  grid-area: 1/2;
+
+}
+.account_settings{
+  grid-area: 2/2;
+}
+.account_notes{
+  grid-area: 1/6;
+}
+.account_name{
+  font-size: 24px;
+  color: blanchedalmond;
+  margin-bottom: 30px;
+}
+.notes_container{
+  display: flex;
+  flex-direction: column;
+}
+.account_location{
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: blanchedalmond;
+}
+.text{
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: blanchedalmond;
+}
+.input{
+  border-radius: 20px;
+  height: 25px;
+  width: 200px;
+  border: 1px rgb(255, 255, 255);
+}

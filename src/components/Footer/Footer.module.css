@@ -1,0 +1,9 @@
+.footermenu{
+    display: flex;
+    flex-direction: row;
+    background-color: blanchedalmond;
+}
+.footer{
+    grid-column: 1/-1; 
+  }
+  

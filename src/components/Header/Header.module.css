@@ -1,0 +1,28 @@
+.headerwrapper{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    background-color: blanchedalmond;
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+}
+.menuitem{
+    margin-right: 25px;
+    font-size: 20px;
+}
+#lvlogo{
+    margin-right: 50vw;
+    margin-left: 30px;
+    max-width: 120px;
+}
+
+.header {
+    grid-column: 1/-1; 
+  }
+  .active{
+    color:rgb(0, 225, 255);
+    font-size: 20px;
+    margin-right: 25px;
+}

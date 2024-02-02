@@ -1,0 +1,25 @@
+.navbar{
+    background-color: rgb(205, 255, 240);
+
+}
+.navbarwrapper{
+    display: flex;
+    flex-direction: row;
+}
+.navbarmenu{
+    display: flex;
+    flex-direction: column;
+}
+
+a{
+    color:black;
+    text-decoration: none;
+}
+
+.active{
+    color:rgb(0, 225, 255);
+}
+.navbar {
+    grid-column: 1/-12;
+    grid-row: 2/8;
+  }

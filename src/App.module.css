@@ -1,0 +1,5 @@
+.appwrapper {
+  display: grid;
+  grid-template-rows: 2fr 8fr;
+  grid-template-columns: repeat(12,1fr);
+}
