@@ -1,0 +1,13 @@
+.main{
+    background-color: darkslategrey;
+}
+.goodswrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    gap: 32px; 
+    margin-left: 32px;
+    margin-top: 32px;
+  }
+  .main {
+    grid-column: 2/-1;
+  }
