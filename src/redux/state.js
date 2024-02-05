@@ -1,5 +1,6 @@
-import { rerenderTree } from "../render"
-
+let rerenderTree = () =>{
+    console.log("state")
+}
 
 let state = {
     supportPage: {
@@ -62,6 +63,10 @@ export let addNote = (noteText) => {
 export let updateTextArea = (newtext) => {
     state.accountPage.newInputText = newtext
     rerenderTree(state)
+}
+
+export const subscribe = (observer) => {
+    rerenderTree = observer
 }
 
 export default state;
