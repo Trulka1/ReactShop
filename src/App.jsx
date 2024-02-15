@@ -15,8 +15,8 @@ function App(props) {
           <Header />
           <Navbar />
           <Routes>
-          <Route path="/account" element={<Account state = {props.state.accountPage} addNote = {props.addNote} updateTextArea = {props.updateTextArea} newInputText = {props.state.accountPage.newInputText}/>}/>
           <Route path="/main" element={<Main state = {props.state.mainPage}/>}/>
+          <Route path="/account" element={<Account state = {props.state.accountPage} dispatch = {props.dispatch} newInputText = {props.state.accountPage.newInputText}/>}/>
           <Route path="/support/*" element={<Support state = {props.state.supportPage}/>}/>
           </Routes>
           <Footer />

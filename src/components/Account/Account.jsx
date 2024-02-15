@@ -7,13 +7,13 @@ const Account = (props) => {
     let nodeInput = React.createRef()
 
     let addNote = () => {
-        let text = nodeInput.current.value;
-        props.addNote(text)
+        props.dispatch({type: "ADD-POST"})
     }
 
     let updateTextArea = () => {
-        let newtext = nodeInput.current.value;
-        props.updateTextArea(newtext)
+        let text = nodeInput.current.value;
+        let action = {type: "UPDATE-TEXT-AREA", newText: text}
+        props.dispatch (action)
     }
 
     return (
