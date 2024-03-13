@@ -17,7 +17,7 @@ function App(props) {
           <Routes>
           <Route path="/main" element={<Main state = {props.state.mainPage}/>}/>
           <Route path="/account" element={<Account state = {props.state.accountPage} dispatch = {props.dispatch} newInputText = {props.state.accountPage.newInputText}/>}/>
-          <Route path="/support/*" element={<Support state = {props.state.supportPage}/>}/>
+          <Route path="/support/*" element={<Support state = {props.state.supportPage} store = {props.store}/>}/>
           </Routes>
           <Footer />
         </div>

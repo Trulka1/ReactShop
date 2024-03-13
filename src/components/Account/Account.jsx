@@ -1,19 +1,20 @@
 import React from "react";
 import s from "./Account.module.css";
-
+import { AddNoteActionCreator, UpdateTextAreaActionCreator } from "../../redux/state";
 
 const Account = (props) => {
 
     let nodeInput = React.createRef()
 
     let addNote = () => {
-        props.dispatch({type: "ADD-POST"})
+        debugger;
+        props.dispatch(AddNoteActionCreator())
     }
 
     let updateTextArea = () => {
         let text = nodeInput.current.value;
-        let action = {type: "UPDATE-TEXT-AREA", newText: text}
-        props.dispatch (action)
+        let action = UpdateTextAreaActionCreator(text)
+        props.dispatch(action)
     }
 
     return (
