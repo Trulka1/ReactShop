@@ -1,7 +1,5 @@
-const ADD_NOTE = "ADD_POST"
-const UPDATE_TEXT_AREA = "UPDATE_TEXT_AREA"
-const UPDATE_TEXT_MESSAGE_BODY = "UPDATE-TEXT-MESSAGE_BODY"
-const SEND_MESSAGE = "SEND_MESSAGE"
+import accountReducer from "./account-reducer"
+import supportReducer from "./support-reducer"
 
 let store = {
     _state: {
@@ -63,61 +61,15 @@ let store = {
     },
 
     dispatch(action) {
-        if (action.type === ADD_NOTE) {
-            let newNote = {
-                id: 5,
-                note: this._state.accountPage.newInputText,
-            }
-            this._state.accountPage.notesData.push(newNote)
-            this._state.accountPage.newInputText = ""
-            this._callSub(this._state)
 
-        } else if (action.type === UPDATE_TEXT_AREA) {
-            this._state.accountPage.newInputText = action.newText
-            this._callSub(this._state)
+        this._state.accountPage = accountReducer(this._state.accountPage, action)
+        this._state.supportPage = supportReducer(this._state.supportPage, action)
 
-        }else if (action.type === UPDATE_TEXT_MESSAGE_BODY) {
-            this._state.supportPage.newMessageBody = action.body
-            this._callSub(this._state)
-        }else if (action.type === SEND_MESSAGE) {
-            let body = this._state.supportPage.newMessageBody
-            this._state.supportPage.newMessageBody = ""
-            this._state.supportPage.messagesData.push({ id: 6, messagetext: body })
-            this._callSub(this._state)
+        this._callSub(this._state)
+
         }
-    }
-
     
 }
-
-export const AddNoteActionCreator = () => {
-    return {
-        type: ADD_NOTE
-    }
-}
-
-export const UpdateTextAreaActionCreator = (text) => {
-    return {
-        type: UPDATE_TEXT_AREA, 
-        newText: text
-    }
-}
-
-export const UpdateMessageAreaCreator = (body) => {
-    return {
-        type: UPDATE_TEXT_MESSAGE_BODY,
-        body: body
-    }
-}
-
-export const SendMessageCreator = () => {
-    return {
-        type: SEND_MESSAGE, 
-    }
-}
-
-
-
 
 window.store = store;
 export default store;

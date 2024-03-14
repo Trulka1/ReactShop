@@ -2,7 +2,7 @@ import React from "react";
 import style from "./Support.module.css";
 import Ticket from "../Ticket/Ticket";
 import Message from "../Message/Message";
-import { SendMessageCreator, UpdateMessageAreaCreator } from "../../redux/state";
+import { SendMessageCreator, UpdateMessageAreaCreator } from "../../redux/support-reducer";
 
 const Support = (props) => {
 

@@ -1,6 +1,6 @@
 import React from "react";
 import s from "./Account.module.css";
-import { AddNoteActionCreator, UpdateTextAreaActionCreator } from "../../redux/state";
+import { AddNoteCreator, UpdateTextAreaCreator } from "../../redux/account-reducer";
 
 const Account = (props) => {
 
@@ -8,12 +8,12 @@ const Account = (props) => {
 
     let addNote = () => {
         debugger;
-        props.dispatch(AddNoteActionCreator())
+        props.dispatch(AddNoteCreator())
     }
 
     let updateTextArea = () => {
         let text = nodeInput.current.value;
-        let action = UpdateTextAreaActionCreator(text)
+        let action = UpdateTextAreaCreator(text)
         props.dispatch(action)
     }
 
