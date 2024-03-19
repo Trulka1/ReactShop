@@ -1,7 +1,28 @@
 const UPDATE_TEXT_MESSAGE_BODY = "UPDATE-TEXT-MESSAGE_BODY"
 const SEND_MESSAGE = "SEND_MESSAGE"
 
-const supportReducer = (state, action) => {
+let initialState = {
+    ticketsData: [
+        { id: 1, theme: "Не пришёл товар" },
+        { id: 2, theme: "Долго грузится карточка товара" },
+        { id: 3, theme: "Не нравится мне что-то на вашем сайте" },
+        { id: 4, theme: "Купил паленый товар, верните денежку" },
+        { id: 5, theme: "Ты чёрт" },
+        { id: 6, theme: "Можно бесплатно?" },
+        { id: 7, theme: "Как вернуть товар?" },
+        { id: 8, theme: "Я не хочу больше этой хуйней заниматься" },
+    ],
+    messagesData: [
+        { id: 1, messagetext: "Привет" },
+        { id: 2, messagetext: "Как дела" },
+        { id: 3, messagetext: "Норм" },
+        { id: 4, messagetext: "Пока" },
+        { id: 5, messagetext: "Пока" },
+    ],
+    newMessageBody: ""
+}
+
+const supportReducer = (state = initialState, action) => {
 
     switch(action.type){
         case UPDATE_TEXT_MESSAGE_BODY:
@@ -15,7 +36,6 @@ const supportReducer = (state, action) => {
         default:
             return state
     }
-    return state
 }
 
 export const UpdateMessageAreaCreator = (body) => {
