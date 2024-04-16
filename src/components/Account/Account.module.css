@@ -1,6 +1,6 @@
 .account {
     grid-column: 2/-1;
-    background-color: rgb(109, 121, 236);
+    background-color: #fceae6;
   }
 .account_wrapper{
   margin-left: 30px;
@@ -21,7 +21,7 @@
 }
 .account_name{
   font-size: 24px;
-  color: blanchedalmond;
+  color: #302c2c;
   margin-bottom: 30px;
 }
 .notes_container{
@@ -31,12 +31,12 @@
 .account_location{
   font-size: 20px;
   margin-bottom: 30px;
-  color: blanchedalmond;
+  color: #302c2c;
 }
 .text{
   font-size: 18px;
   margin-bottom: 10px;
-  color: blanchedalmond;
+  color: #302c2c;
 }
 .input{
   border-radius: 20px;

@@ -1,9 +1,10 @@
 .GoodsCard{
-    background-color: azure;
+    background-color: #bd8484;
     padding: 10px;
     border-radius: 20px;
     width: 200px;
     height: 300px;
+    font-family:Arial, Helvetica, sans-serif;
 }
 .goodscardwrapper{
     display:flex;

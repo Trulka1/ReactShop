@@ -7,7 +7,7 @@ const Header = () =>{
         <div className={style.header}>
          <div className={style.headerwrapper}>
          <div  className={style.logo}>
-            <img alt="description" id={style.lvlogo} src="https://i.pinimg.com/originals/86/75/75/867575c5faf2694b852c4cf756d5f51e.png"></img>
+            <img alt="logo" id={style.lvlogo} src="https://lh3.google.com/u/0/d/1iSUfIkgQYw8GorBqHMn1lzCMEqxMfJ2z=w1583-h956-iv1"></img>
          </div>
          <div className={style.menu}>
             <div className={style.menuitem}> Каталог</div>
